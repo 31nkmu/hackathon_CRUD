@@ -21,13 +21,15 @@ def main():
                 3-фильтрация по дате\n\
                 Ваш выбор: '
             )
-            if '1' in filt:
-                print(get_data(ge_price=int(input('Отфильтруйте выше определенной цены: ')), page=page1))
-            if '2' in filt:
-                print(get_data(le_price=int(input('Отфильтруйте ниже определенной цены: ')), page=page1))
-            if '3' in filt:
-                print(get_data(date=input('Отфильтруйте по дате (2022-10-4): '), page=page1))
-            print(get_data(page=page1))
+            if filt != '':
+                if '1' in filt:
+                    print(get_data(ge_price=int(input('Отфильтруйте выше определенной цены: ')), page=page1))
+                if '2' in filt:
+                    print(get_data(le_price=int(input('Отфильтруйте ниже определенной цены: ')), page=page1))
+                if '3' in filt:
+                    print(get_data(date=input('Отфильтруйте по дате (2022-10-4): '), page=page1))
+            else:
+                print(get_data(page=page1))
         elif choice == '2':
             print(get_one_product())
         elif choice == '3':

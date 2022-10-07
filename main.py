@@ -13,23 +13,14 @@ def main():
             Ваш выбор: '
         )
         if choice == '1':
-            page1 = int(input('Выберите страницу (в одной странице будет 3 товара): '))
-            filt = input(
-                'Выберите способ фильтрации через запятую:\n\
-                1-выше определенной цены\n\
-                2-ниже определенной цены\n\
-                3-фильтрация по дате\n\
-                Ваш выбор: '
+            print('Если какая-то фильтрация вам не нужна, нажмите Enter')
+            print(*get_data(
+                ge_price=input('Отфильтруйте выше определенной цены: '),
+                le_price=input('Отфильтруйте ниже определенной цены: '),
+                stat=input('Выберите статус active/inactive: ').lower(),
+                page=input('Выберите страницу: '),
+                date=input('Отфильтруйте по дате (2022-10-4 xx:xx:xx): ')), sep='\n'
             )
-            if filt != '':
-                if '1' in filt:
-                    print(get_data(ge_price=int(input('Отфильтруйте выше определенной цены: ')), page=page1))
-                if '2' in filt:
-                    print(get_data(le_price=int(input('Отфильтруйте ниже определенной цены: ')), page=page1))
-                if '3' in filt:
-                    print(get_data(date=input('Отфильтруйте по дате (2022-10-4): '), page=page1))
-            else:
-                print(get_data(page=page1))
         elif choice == '2':
             print(get_one_product())
         elif choice == '3':

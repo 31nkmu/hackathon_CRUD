@@ -16,5 +16,41 @@
     "date of update": "2022-10-07 20:44:17",
     "description": "woman",
     "status": "active"
+  },
+  {
+    "id": 3,
+    "name": "eggs",
+    "price": 150,
+    "date of creation": "2022-10-07 21:44:10",
+    "date of update": "2022-10-07 21:44:10",
+    "description": "from kr",
+    "status": "active"
+  },
+  {
+    "id": 4,
+    "name": "car",
+    "price": 200,
+    "date of creation": "2022-10-07 21:51:14",
+    "date of update": "2022-10-07 21:51:14",
+    "description": "porshe",
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "name": "divan",
+    "price": 14,
+    "date of creation": "2022-10-07 22:29:29",
+    "date of update": "2022-10-07 22:29:29",
+    "description": "sdfae",
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "name": "banana",
+    "price": 190,
+    "date of creation": "2022-10-07 22:46:57",
+    "date of update": "2022-10-07 22:46:57",
+    "description": "yellow",
+    "status": "active"
   }
 ]

@@ -1,16 +1,20 @@
 import json
 from datetime import datetime
 
-
 FILE_JSON = 'data.json'
 
 
-def get_data(ge_price=None, le_price=None, stat=None, page=1, date=None):
+def get_data(ge_price=None, le_price=None, stat=None, page=None, date=None):
     with open(FILE_JSON) as file:
         products = json.load(file)
+    if page:
+        page = int(page)
+        products = products[page * 3 - 3:page * 3]
     if ge_price:
+        ge_price = int(ge_price)
         products = [i for i in products if i['price'] >= ge_price]
     if le_price:
+        le_price = int(le_price)
         products = [i for i in products if i['price'] <= le_price]
     if stat == 'active':
         products = [i for i in products if i['status'] == stat]
@@ -18,7 +22,6 @@ def get_data(ge_price=None, le_price=None, stat=None, page=1, date=None):
         products = [i for i in products if i['status'] == stat]
     if date:
         products = [i for i in products if date in i['date of creation']]
-    products = products[page*3 - 3:page*3]
     return products
 
 

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "monkey",
+    "price": 1241,
+    "date of creation": "2022-10-07 20:26:25",
+    "date of update": "2022-10-07 20:27:02",
+    "description": "can run",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "amina",
+    "price": 3411,
+    "date of creation": "2022-10-07 20:44:17",
+    "date of update": "2022-10-07 20:44:17",
+    "description": "woman",
+    "status": "active"
+  }
+]

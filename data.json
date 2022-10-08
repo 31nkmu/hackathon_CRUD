@@ -2,18 +2,18 @@
   {
     "id": 1,
     "name": "monkey",
-    "price": 1241,
+    "price": 100,
     "date of creation": "2022-10-07 20:26:25",
-    "date of update": "2022-10-07 20:27:02",
+    "date of update": "2022-10-08 13:49:53",
     "description": "can run",
     "status": "active"
   },
   {
     "id": 2,
     "name": "amina",
-    "price": 3411,
+    "price": 140,
     "date of creation": "2022-10-07 20:44:17",
-    "date of update": "2022-10-07 20:44:17",
+    "date of update": "2022-10-08 13:50:15",
     "description": "woman",
     "status": "active"
   },
@@ -38,9 +38,9 @@
   {
     "id": 5,
     "name": "divan",
-    "price": 14,
+    "price": 170,
     "date of creation": "2022-10-07 22:29:29",
-    "date of update": "2022-10-07 22:29:29",
+    "date of update": "2022-10-08 13:50:33",
     "description": "sdfae",
     "status": "active"
   },
@@ -51,6 +51,15 @@
     "date of creation": "2022-10-07 22:46:57",
     "date of update": "2022-10-07 22:46:57",
     "description": "yellow",
+    "status": "active"
+  },
+  {
+    "id": 7,
+    "name": "iphone",
+    "price": 200,
+    "date of creation": "2022-10-08 13:48:42",
+    "date of update": "2022-10-08 13:50:47",
+    "description": "apple",
     "status": "active"
   }
 ]

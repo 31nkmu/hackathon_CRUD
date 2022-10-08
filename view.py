@@ -8,17 +8,12 @@ def get_data(ge_price=None, le_price=None, stat=None, page=None, date=None):
     with open(FILE_JSON) as file:
         products = json.load(file)
     if page:
-        page = int(page)
         products = products[page * 3 - 3:page * 3]
     if ge_price:
-        ge_price = int(ge_price)
         products = [i for i in products if i['price'] >= ge_price]
     if le_price:
-        le_price = int(le_price)
         products = [i for i in products if i['price'] <= le_price]
-    if stat == 'active':
-        products = [i for i in products if i['status'] == stat]
-    elif stat == 'inactive':
+    if stat == 'active' or stat == 'inactive':
         products = [i for i in products if i['status'] == stat]
     if date:
         products = [i for i in products if date in i['date of creation']]
@@ -26,7 +21,6 @@ def get_data(ge_price=None, le_price=None, stat=None, page=None, date=None):
 
 
 def get_one_product(id_=None):
-    id_ = int(input('Введите id продукта: '))
     products = get_data()
     product = [i for i in products if i['id'] == id_]
     if product:
@@ -36,8 +30,7 @@ def get_one_product(id_=None):
 
 def post_product():
     products = get_data()
-    max_id = max(i['id'] for i in products)
-    new_id = max_id + 1
+    new_id = max(i['id'] for i in products) + 1
     products.append({
         'id': new_id,
         'name': input('Введите название продукта: '),
@@ -52,7 +45,6 @@ def post_product():
 
 
 def update_product(id_=None):
-    id_ = int(input('Введите id продукта, который хотите обновить: '))
     products = get_data()
     product = [i for i in products if i['id'] == id_]
     if product:

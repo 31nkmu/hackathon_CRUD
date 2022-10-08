@@ -67,7 +67,6 @@ def update_product(id_=None):
 
 
 def del_product(id_=None):
-    id_ = int(input('Введите id продукта, который хотите удалить: '))
     products = get_data()
     del_prod = [i for i in products if i['id'] == id_]
     if del_prod:
